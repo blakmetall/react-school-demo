@@ -1,0 +1,932 @@
+html,
+body,
+#root {
+    height: 100vh;
+    min-height: 100vh;
+}
+
+// bootstrap colors
+$green: #31dddd;
+$primary: #d90024;
+$secondary: #dbdbdb;
+$success: #6b9dbf;
+$danger: #d3264b;
+$warning: #ffcc00;
+$info: #D6CBB9;
+
+// custom colors
+$appBlue: #B5DCEA;
+$appBlue2: #6fb2da;
+$appBlue3: #88bdda;
+$appBlue4: #4562cc;
+$appBrown: #d6cbb9;
+$appGray: #bbbbbb;
+$appGray2: #a1a1a1;
+$appGray3: #e1e1e1;
+$appGray4: #efefef;
+$appGray5: #757575;
+$appGray6: #e8e8e8;
+$appGreen: #07cf7c;
+
+// bootstrap theming: custom colors scheme
+$theme-colors: ("green": $green,
+    "app-blue": $appBlue,
+    "app-blue-2": $appBlue2,
+    "app-blue-3": $appBlue3,
+    "app-blue-4": $appBlue4,
+    "app-brown": $appBrown,
+    "app-gray": $appGray,
+    "app-gray-2": $appGray2,
+    "app-gray-3": $appGray3,
+    "app-gray-4": $appGray4,
+    "app-gray-5": $appGray5,
+    "app-gray-6": $appGray6,
+    "app-green": $appGreen,  
+    );
+
+// bootstrap theming: card
+$card-color: #a1a1a1;
+$card-border-color: transparent;
+$card-spacer-x: 30px;
+
+// bootstrap theming: forms
+$input-bg: #F2F7FB;
+$input-border-color: transparent;
+$input-border-radius: 9px;
+$form-group-margin-bottom: 1.5rem;
+
+// bootstrap theming: buttons
+$btn-padding-y: 13px;
+$btn-padding-x: 35px;
+$btn-border-radius: 12px;
+$btn-padding-y-sm: 10px;
+$btn-padding-x-sm: 25px;
+$btn-border-radius-sm: 14px;
+$btn-padding-y-lg: 13px;
+$btn-padding-x-lg: 45px;
+$btn-border-radius-lg: 14px;
+
+// bootstrap theming: buttons reset
+$btn-box-shadow : (none);
+$btn-focus-box-shadow : (none);
+$btn-active-box-shadow : (none) !important;
+
+// bootstrap theming: tables
+$table-bg: white;
+$table-border-color:transparent;
+$table-cell-padding: 18px;
+$table-condensed-cell-padding: 25px;
+
+// bootstrap theming: progress bar
+$progress-bg: #f5f5f5;
+$progress-bar-color:#fff;
+$progress-bar-bg: $primary;
+$progress-bar-success-bg: $success;
+$progress-bar-warning-bg: $warning;
+$progress-bar-danger-bg: $danger;
+$progress-bar-info-bg: $info;
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/code';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/tables';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/dropdown';
+@import '~bootstrap/scss/button-group';
+@import '~bootstrap/scss/input-group';
+@import '~bootstrap/scss/custom-forms';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/card';
+@import '~bootstrap/scss/breadcrumb';
+@import '~bootstrap/scss/pagination';
+@import '~bootstrap/scss/badge';
+@import '~bootstrap/scss/jumbotron';
+@import '~bootstrap/scss/alert';
+@import '~bootstrap/scss/progress';
+@import '~bootstrap/scss/media';
+@import '~bootstrap/scss/list-group';
+@import '~bootstrap/scss/close';
+@import '~bootstrap/scss/toasts';
+@import '~bootstrap/scss/modal';
+@import '~bootstrap/scss/tooltip';
+@import '~bootstrap/scss/popover';
+@import '~bootstrap/scss/carousel';
+@import '~bootstrap/scss/spinners';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/print';
+
+body {
+    font-family: 'Raleway', 'Verdana', 'Arial', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+// bootstrap overrides
+.mx-6 {
+    margin-left: ($spacer * 4.5) !important;
+    margin-right: ($spacer * 4.5) !important;
+}
+
+.pt-3-2 {
+    padding-top: 1.5rem;
+}
+
+.pt-3-3 {
+    padding-top: 2rem;
+}
+
+.px-6 {
+    padding-left: ($spacer * 4.5) !important;
+    padding-right: ($spacer * 4.5) !important;
+}
+
+.px-7 {
+    padding-left: ($spacer * 5) !important;
+    padding-right: ($spacer * 5) !important;
+}
+
+.rounded-15 {
+    border-radius: 15px !important;
+}
+
+.rounded-top-15 {
+    border-radius: 15px 15px 0 0 !important;
+}
+
+.rounded-top-left-15 {
+    border-radius: 15px 0 0 0;
+}
+
+.rounded-top-right-15 {
+    border-radius: 0 15px 0 0;
+}
+
+.rounded-bottom-15 {
+    border-radius: 15px;
+}
+
+.rounded-25 {
+    border-radius: 25px;
+}
+
+.rounded-top-25 {
+    border-radius: 25px 25px 0 0;
+}
+
+.rounded-top-left-25 {
+    border-radius: 25px 0 0 0;
+}
+
+.rounded-top-right-25 {
+    border-radius: 0 25px 0 0;
+}
+
+.rounded-bottom-25 {
+    border-radius: 25px;
+}
+
+.rounded-50 {
+    border-radius: 50px;
+}
+
+.card {
+    &.sm {
+        width: 100%;
+        max-width: map-get($container-max-widths, 'sm');
+    }
+
+    &.md {
+        width: 100%;
+        max-width: map-get($container-max-widths, 'md')
+    }
+
+    &.lg {
+        width: 100%;
+        max-width: map-get($container-max-widths, 'lg')
+    }
+
+    &.xl {
+        width: 100%;
+        max-width: map-get($container-max-widths, 'xl')
+    }
+}
+
+.form-group {
+    margin-bottom: 0;
+
+    .form-label {
+        padding-left: 5px;
+        line-height: 1.5em;
+    }
+
+    .form-control {
+        padding: 5px 15px 7px 16px;
+    }
+}
+
+.form-check {
+    .form-check-label {
+        padding-left: 0.5rem;
+    }
+}
+
+.progress {
+    height: 6px !important;
+}
+
+.progress.secondary {
+    background: #525252 !important;
+
+    &>.progress-bar.bg-secondary {
+        background: #e6e6e6 !important;
+    }
+}
+
+.btn-app-blue {
+    color: #ffffff;
+
+    &:focus,
+    &:focus-within,
+    &:visited,
+    &:active,
+    &:hover {
+        color: white !important;
+    }
+
+    &[disabled] {
+        color: white !important;
+        background-color: #ccd7da;
+        border-color: #ccd7da;
+    }
+}
+
+.custom-radio-green {
+    .custom-control-input:checked~.custom-control-label::before {
+        color: #fff;
+        border-color: $green;
+        background-color: $green;
+        box-shadow: 0px 0px 0px 3px rgba(67, 187, 224, 0.39);
+    }
+}
+
+// end bootstrap overrides
+
+.text-black {
+    color: #000;
+}
+
+.app-clickable {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.app-line-height-0 {
+    line-height: 1em;
+}
+
+.app-line-height-1 {
+    line-height: 1.1em;
+}
+
+.app-line-height-2 {
+    line-height: 1.2em;
+}
+
+.app-line-height-3 {
+    line-height: 1.3em;
+}
+
+.app-line-height-4 {
+    line-height: 1.4em;
+}
+
+.app-line-height-5 {
+    line-height: 1.5em;
+}
+
+.app-line-height-6 {
+    line-height: 1.6em;
+}
+
+.app-line-height-7 {
+    line-height: 1.7em;
+}
+
+.app-line-height-8 {
+    line-height: 1.8em;
+}
+
+.app-line-height-9 {
+    line-height: 1.9em;
+}
+
+.app-top-1 {
+    top: 0.25rem;
+}
+
+.app-top-2 {
+    top: 0.5rem;
+}
+
+.app-top-3 {
+    top: 0.75rem;
+}
+
+.app-top-4 {
+    top: 1rem;
+}
+
+.app-top-5 {
+    top: 1.25rem;
+}
+
+.app-top-6 {
+    top: 1.5rem;
+}
+
+.app-top-7 {
+    top: 1.75rem;
+}
+
+.app-top-8 {
+    top: 2rem;
+}
+
+.app-top-9 {
+    top: 2.25rem;
+}
+
+.letter-spacing-0 {
+    letter-spacing: 0.04rem;
+}
+
+.letter-spacing-1 {
+    letter-spacing: 0.075rem;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 0.1rem;
+}
+
+.letter-spacing-3 {
+    letter-spacing: 0.125rem;
+}
+
+.letter-spacing-4 {
+    letter-spacing: 0.15rem;
+}
+
+.letter-spacing-5 {
+    letter-spacing: 0.175rem;
+}
+
+.letter-spacing-6 {
+    letter-spacing: 0.2rem;
+}
+
+.letter-spacing-7 {
+    letter-spacing: 0.225rem;
+}
+
+.letter-spacing-8 {
+    letter-spacing: 0.25rem;
+}
+
+.letter-spacing-9 {
+    letter-spacing: 0.275rem;
+}
+
+.font-weight-100 {
+    font-weight: 100;
+}
+
+.font-weight-200 {
+    font-weight: 200;
+}
+
+.font-weight-300 {
+    font-weight: 300;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+.font-weight-800 {
+    font-weight: 800;
+}
+
+.font-weight-900 {
+    font-weight: 900;
+}
+
+.app-font-11 {
+    font-size: 11px;
+}
+
+.app-font-12 {
+    font-size: 12px;
+}
+
+.app-font-13 {
+    font-size: 13px;
+}
+
+.app-font-14 {
+    font-size: 14px;
+}
+
+.app-font-15 {
+    font-size: 15px;
+}
+
+.app-font-16 {
+    font-size: 16px;
+}
+
+.app-font-17 {
+    font-size: 17px;
+}
+
+.app-font-18 {
+    font-size: 18px;
+}
+
+.app-font-19 {
+    font-size: 19px;
+}
+
+.app-font-20 {
+    font-size: 20px;
+}
+
+.app-font-21 {
+    font-size: 21px;
+}
+
+.app-font-22 {
+    font-size: 22px;
+}
+
+.app-font-23 {
+    font-size: 23px;
+}
+
+.app-font-24 {
+    font-size: 24px;
+}
+
+.app-font-25 {
+    font-size: 25px;
+}
+
+.app-font-26 {
+    font-size: 26px;
+}
+
+.app-font-27 {
+    font-size: 27px;
+}
+
+.app-font-28 {
+    font-size: 28px;
+}
+
+.app-font-29 {
+    font-size: 29px;
+}
+
+.app-font-30 {
+    font-size: 30px;
+}
+
+.app-font-33 {
+    font-size: 33px;
+}
+
+.app-font-36 {
+    font-size: 36px;
+}
+
+.app-font-39 {
+    font-size: 39px;
+}
+
+.app-font-42 {
+    font-size: 42px;
+}
+
+.app-font-45 {
+    font-size: 45px;
+}
+
+.app-font-55 {
+    font-size: 55px;
+}
+
+.text-gray-100 {
+    color: $gray-100 !important;
+}
+
+.text-gray-200 {
+    color: $gray-200 !important;
+}
+
+.text-gray-300 {
+    color: $gray-300 !important;
+}
+
+.text-gray-400 {
+    color: $gray-400 !important;
+}
+
+.text-gray-500 {
+    color: $gray-500 !important;
+}
+
+.text-gray-600 {
+    color: $gray-600 !important;
+}
+
+.text-gray-700 {
+    color: $gray-700 !important;
+}
+
+.text-gray-800 {
+    color: $gray-800 !important;
+}
+
+.text-gray-900 {
+    color: $gray-900 !important;
+}
+
+.app-line {
+    height: 6px;
+    background: $secondary;
+
+    &.w-20 {
+        width: 20%;
+    }
+
+    &.w-25 {
+        width: 50%;
+    }
+
+    &.w-40 {
+        width: 40%;
+    }
+
+    &.w-50 {
+        width: 50%;
+    }
+
+    &.w-60 {
+        width: 60%;
+    }
+
+    &.w-75 {
+        width: 75%;
+    }
+
+    &.w-80 {
+        width: 80%;
+    }
+
+    &.xxs {
+        height: 1px;
+    }
+
+    &.xs {
+        height: 2px;
+    }
+
+    &.sm {
+        height: 4px;
+    }
+
+    &.md {
+        height: 8px;
+    }
+
+    &.lg {
+        height: 10px;
+    }
+
+    &.xl {
+        height: 12px;
+    }
+
+    &.primary {
+        background: $primary;
+    }
+
+    &.secondary {
+        background: $secondary;
+    }
+
+    &.warning {
+        background: $warning;
+    }
+
+    &.success {
+        background: $success;
+    }
+
+    &.info {
+        background: $info;
+    }
+}
+
+.app-container,
+.app-container-xl {
+    max-width: map-get($container-max-widths, 'xl');
+}
+
+.app-container-lg {
+    max-width: map-get($container-max-widths, 'lg');
+}
+
+.app-container-md {
+    max-width: map-get($container-max-widths, 'md');
+}
+
+.app-container-sm {
+    max-width: map-get($container-max-widths, 'sm');
+}
+
+.app-container-xs {
+    max-width: map-get($container-max-widths, 'xs');
+}
+
+.app-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, 0.45);
+    z-index: 0;
+}
+
+pre code {
+    color: #e83e8c;
+}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {
+    .app-font-16 {
+        font-size: 14px;
+    }
+
+    .app-font-17 {
+        font-size: 15px;
+    }
+
+    .app-font-18 {
+        font-size: 16px;
+    }
+
+    .app-font-19 {
+        font-size: 17px;
+    }
+
+    .app-font-20 {
+        font-size: 18px;
+    }
+
+    .app-font-21 {
+        font-size: 19px;
+    }
+
+    .app-font-22 {
+        font-size: 20px;
+    }
+
+    .app-font-23 {
+        font-size: 21px;
+    }
+
+    .app-font-24 {
+        font-size: 22px;
+    }
+
+    .app-font-25 {
+        font-size: 23px;
+    }
+
+    .app-font-26 {
+        font-size: 24px;
+    }
+
+    .app-font-27 {
+        font-size: 25px;
+    }
+
+    .app-font-28 {
+        font-size: 26px;
+    }
+
+    .app-font-29 {
+        font-size: 27px;
+    }
+
+    .app-font-30 {
+        font-size: 27px;
+    }
+
+    .app-font-33 {
+        font-size: 30px;
+    }
+
+    .app-font-36 {
+        font-size: 33px;
+    }
+
+    .app-font-39 {
+        font-size: 36px;
+    }
+
+    .app-font-42 {
+        font-size: 39px;
+    }
+
+    .app-font-45 {
+        font-size: 42px;
+    }
+
+    .app-font-55 {
+        font-size: 55px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .app-font-18 {
+        font-size: 14px;
+    }
+
+    .app-font-19 {
+        font-size: 15px;
+    }
+
+    .app-font-20 {
+        font-size: 16px;
+    }
+
+    .app-font-21 {
+        font-size: 17px;
+    }
+
+    .app-font-22 {
+        font-size: 18px;
+    }
+
+    .app-font-23 {
+        font-size: 19px;
+    }
+
+    .app-font-24 {
+        font-size: 20px;
+    }
+
+    .app-font-25 {
+        font-size: 21px;
+    }
+
+    .app-font-26 {
+        font-size: 22px;
+    }
+
+    .app-font-27 {
+        font-size: 23px;
+    }
+
+    .app-font-28 {
+        font-size: 24px;
+    }
+
+    .app-font-29 {
+        font-size: 25px;
+    }
+
+    .app-font-30 {
+        font-size: 26px;
+    }
+
+    .app-font-33 {
+        font-size: 29px;
+    }
+
+    .app-font-36 {
+        font-size: 32px;
+    }
+
+    .app-font-39 {
+        font-size: 35px;
+    }
+
+    .app-font-42 {
+        font-size: 38px;
+    }
+
+    .app-font-45 {
+        font-size: 41px;
+    }
+
+    .app-font-55 {
+        font-size: 55px;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .app-font-22 {
+        font-size: 16px;
+    }
+
+    .app-font-23 {
+        font-size: 17px;
+    }
+
+    .app-font-24 {
+        font-size: 18px;
+    }
+
+    .app-font-25 {
+        font-size: 19px;
+    }
+
+    .app-font-26 {
+        font-size: 20px;
+    }
+
+    .app-font-27 {
+        font-size: 21px;
+    }
+
+    .app-font-28 {
+        font-size: 22px;
+    }
+
+    .app-font-29 {
+        font-size: 23px;
+    }
+
+    .app-font-30 {
+        font-size: 23px;
+    }
+
+    .app-font-33 {
+        font-size: 26px;
+    }
+
+    .app-font-36 {
+        font-size: 29px;
+    }
+
+    .app-font-39 {
+        font-size: 32px;
+    }
+
+    .app-font-42 {
+        font-size: 35px;
+    }
+
+    .app-font-45 {
+        font-size: 38px;
+    }
+
+    .app-font-55 {
+        font-size: 55px;
+    }
+}
